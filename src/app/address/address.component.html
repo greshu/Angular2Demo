@@ -1,0 +1,44 @@
+<div class="col-md-12">
+    <!-- <table class="table table-striped">
+        <thead>
+          <th>Id</th>
+          <th>Address</th>
+          <th>CreatedDate</th>
+          <th>PrivKey</th>
+          <th>ProjType</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let address of addressList">
+              <td>{{address.Id}}</td>
+              <td>{{address.Address}}</td>
+              <td>{{address.CreatedDate}}</td>
+              <td>{{address.PrivKey}}</td>
+              <td>{{address.ProjType}}</td>
+          </tr>
+        </tbody>
+      </table> -->
+
+      <hotTable [data]="addressList"
+      [colHeaders]="colHeaders"
+      [columns]="columns"
+      [options]="options"
+      [colWidths]="colWidths">
+</hotTable>
+<ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+  <li [ngClass]="{disabled:pager.currentPage === 1}">
+      <a (click)="setPage(1)">First</a>
+  </li>
+  <li [ngClass]="{disabled:pager.currentPage === 1}">
+      <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+  </li>
+  <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+      <a (click)="setPage(page)">{{page}}</a>
+  </li>
+  <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+      <a (click)="setPage(pager.currentPage + 1)">Next</a>
+  </li>
+  <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+      <a (click)="setPage(pager.totalPages)">Last</a>
+  </li>
+</ul>
+</div>

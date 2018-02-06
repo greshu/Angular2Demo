@@ -1,0 +1,76 @@
+<!-- <form name="vm.signForm">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Sign Transaction</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label for="hexCode">Hex code <span class="text-danger">*</span></label>
+                    <input type="text" id="hexCode" name="hexCode" class="form-control" ng-model="vm.signData.hexCode"
+                           placeholder="Hex Code" required />
+                    <span class=" text-danger validation-error" ng-if="vm.signForm.hexCode.$invalid && !vm.signForm.hexCode.$pristine">
+                        Hex code is required
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label for="btcAddress">Bitcoin Address <span class="text-danger">*</span></label>
+                    <input type="text" id="btcAddress" name="btcAddress" class="form-control" ng-model="vm.signData.btcAddress"
+                           placeholder="Bitcoin Address" required />
+                    <span class="text-danger validation-error" ng-if="vm.signForm.btcAddress.$invalid && !vm.signForm.btcAddress.$pristine">
+                        Bitcoin address is required.
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label for="scriptPubKey">Script Public Key <span class="text-danger">*</span></label>
+                    <input type="text" id="scriptPubKey" name="scriptPubKey" class="form-control" ng-model="vm.signData.scriptPubKey"
+                           placeholder="Script Public Key" required />
+                    <span class="text-danger validation-error" ng-if="vm.signForm.scriptPubKey.$invalid && !vm.signForm.scriptPubKey.$pristine">
+                        Script Public Key is required.
+                    </span>
+                </div>
+            </div>
+            <div class="row" ng-if="vm.signedResponse.complete != null || vm.signedResponse.complete != undefined">
+                <div class="form-group col-md-12">
+                    <label>Is Completed: {{vm.signedResponse.complete}} </label>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Signed Transaction Hex</label>
+                    <textarea class="form-control" ng-model="vm.signedResponse.hex" rows="5" disabled></textarea>
+                </div>
+
+            </div>
+        </div>
+        <div class="panel-footer">
+            <input type="button" class="btn btn-primary" value="Sign Transaction" ng-disabled="vm.signForm.$invalid" ng-click="vm.signHexCode()"/>
+        </div>
+    </div>
+</form> -->
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel title="Simple">
+          <ng-template ngbPanelContent>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+            aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+            occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+            labore sustainable VHS.
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel>
+          <ng-template ngbPanelTitle>
+            <span>&#9733; <b>Fancy</b> title &#9733;</span>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+            aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+            occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+            labore sustainable VHS.
+          </ng-template>
+</ngb-panel>
